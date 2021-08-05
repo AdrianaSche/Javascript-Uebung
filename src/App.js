@@ -15,9 +15,10 @@ function App() {
   const clearCharacters = () => setCharacters([])
 
   const searchHandler = event => setSearch(event.target.value)
-  const filteredCharacters = characters.filter(character =>
-    character.name.toLowerCase().includes(search.toLowerCase())
-  )
+  const filteredCharacters = () =>
+    characters.filter(character =>
+      character.name.toLowerCase().includes(search.toLowerCase())
+    )
 
   const heading = 'Character Gallery'
   // const characters = response.results
