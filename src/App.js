@@ -1,5 +1,5 @@
 import './App.css'
-import response from './characters-response.json'
+//import response from './characters-response.json'
 import Header from './components/Header'
 import CharacterGallery from './components/CharacterGallery'
 import { useEffect, useState } from 'react'
@@ -16,11 +16,11 @@ function App() {
       .catch(error => console.error(error))
   }, [])
 
-  const loadCharacters = () => {
+  /*const loadCharacters = () => {
     setCharacters(response.results)
   }
   const clearCharacters = () => setCharacters([])
-
+*/
   const searchHandler = event => setSearch(event.target.value)
   const filteredCharacters = characters.filter(character =>
     character.name.toLowerCase().includes(search.toLowerCase())
@@ -31,8 +31,8 @@ function App() {
   return (
     <div>
       <Header title={heading} />
-      <button onClick={loadCharacters}>load cards</button>
-      <button onClick={clearCharacters}>clear Characters</button>
+      {/* <button onClick={loadCharacters}>load cards</button>
+        <button onClick={clearCharacters}>clear Characters</button>*/}
       <input type="text" onChange={searchHandler} />
       <CharacterGallery characters={filteredCharacters} />
     </div>
