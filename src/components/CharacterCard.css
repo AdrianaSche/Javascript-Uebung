@@ -1,0 +1,25 @@
+.character-card{
+    font-family: sans-serif;
+    width: 300px;
+    border: solid hotpink;
+    border-radius: 15px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 1px 2px 8px hotpink;
+    margin: 10px;
+    background-color: rgba(255, 105, 183, 0.2);
+}
+.character-card__image{
+    width: 100%;
+
+}
+
+.heading{
+    font-size: 110%;
+}
+
+.character-cards__properties {
+    color: gray;
+    font-size: 90%;
+    font-family: Chalkboard;
+}

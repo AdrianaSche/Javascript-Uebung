@@ -1,0 +1,22 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #89dff8;
+}
+
+.header__image{
+    height: 48px;
+}
+
+.header__image + .header__title{
+
+    margin-left: 12px;
+
+}
+
+.header__title{
+    margin: 0;
+
+}
