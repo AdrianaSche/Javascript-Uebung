@@ -1,25 +1,28 @@
-
-import './App.css';
-import Header from "./components/Header";
+import './App.css'
 import response from './characters-response.json'
-import CharacterGallery from "./components/CharacterGallery";
-import {useState} from "react";
+import Header from './components/Header'
+import CharacterGallery from './components/CharacterGallery'
+import { useState } from 'react'
 
 function App() {
-
-  const[characters,setCharacters] = useState([])
-  const loadCharacters = () =>{
+  //setCharacter schreibt in character rein
+  //
+  const [characters, setCharacters] = useState([])
+  const loadCharacters = () => {
     setCharacters(response.results)
   }
-  const heading = "Character Gallery"
- // const characters = response.results
-  return <div>
-    <Header title={heading}/>
-    <button onClick={loadCharacters}>load cards</button>
-    <CharacterGallery characters={characters}/>
-  </div>
+  const clearCharacters = () => setCharacters([])
 
-
+  const heading = 'Character Gallery'
+  // const characters = response.results
+  return (
+    <div>
+      <Header title={heading} />
+      <button onClick={loadCharacters}>load cards</button>
+      <button onClick={clearCharacters}>clear Characters</button>
+      <CharacterGallery characters={characters} />
+    </div>
+  )
 }
 
-export default App;
+export default App
