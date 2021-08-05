@@ -34,7 +34,10 @@ function App() {
       {/* <button onClick={loadCharacters}>load cards</button>
         <button onClick={clearCharacters}>clear Characters</button>*/}
       <input type="text" onChange={searchHandler} />
-      <CharacterGallery characters={filteredCharacters} />
+      {filteredCharacters.length === 0 && <p>no characters found!</p>}
+      {filteredCharacters.length === 0 || (
+        <CharacterGallery characters={filteredCharacters} />
+      )}
     </div>
   )
 }
